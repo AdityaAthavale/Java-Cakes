@@ -6,80 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact</title>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href=".\assets\css\contact.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script type="text/javascript" src="./assets/javascript/contact.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-        body {
-            background-color: bisque;
-            font-size: 25px;
+        * {
+            box-sizing: border-box;
+            color: white;
         }
 
-        .header {
-            text-decoration: none;
+        .checked {
+            color: orange;
         }
     </style>
-
-
 </head>
-<div class="card-header header">
-    <span id="about">
-        <a href="#">About</a>
-    </span>
-    <span id="menu">
-        <a href="#">Menu</a>
-    </span>
-    <span id="contact">
-        <a href="#">Contact</a>
-    </span>
-</div>
-
-
-
 
 <body>
-
-    <!-- Add Contact -->
-    <div class="container row">
-        <div class="col-8">
-            <form method="POST" action="#">
-                <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
-                </div>
-
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" class="form-control" id="lastName" aria-describedby="lastName">
-                </div>
-
-                <div class="form-group">
-                    <label for="phoneNumber">Phone Number</label>
-                    <input type="tel" class="form-control" id="phoneNumber" aria-describedby="phoneNumber"
-                        placeholder="(xxx) xxx-xxxx">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="email">
-                </div>
-
-                <div class="form-group">
-                    <label for="messages">Message</label>
-                    <textarea class="form-control" id="description" rows="5"></textarea>
-                </div>
-
-                <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
-
-            </form>
+    <h1 class=" text-center text-white d-none d-lg-block site-heading"><span
+            class="text-primary site-heading-upper mb-3"></span><span class="site-heading-lower"
+            style="color: #07f164;font-size: 119px; font-weight: bold;">Java cakes</span></h1>
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark py-lg-4" id="mainNav">
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">THE
+                CAKES</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">About
+                            us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a> </li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-
-        <div class="col-4">Here we can add more info about the page</div>
+    </nav>
+    <div class='row'>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <div id="feedbackCard" class="card text-white bg-dark mb-3">
+                <div class="card-header">Rating
+                    <div>
+                        <span class="fa fa-star" id="star1" onclick="add(this,1)"></span>
+                        <span class="fa fa-star" id="star2" onclick="add(this,2)"></span>
+                        <span class="fa fa-star" id="star3" onclick="add(this,3)"></span>
+                        <span class="fa fa-star" id="star4" onclick="add(this,4)"></span>
+                        <span class="fa fa-star" id="star5" onclick="add(this,5)"></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="#">
+                        <div class="form-group">
+                            <label for="firstName">Name</label>
+                            <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneNumber">Phone Number</label>
+                            <input type="tel" class="form-control" id="phoneNumber" aria-describedby="phoneNumber"
+                                placeholder="(xxx) xxx-xxxx">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="messages">We appreciate any Feedback</label>
+                            <textarea class="form-control" id="description" rows="4"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-4">
+            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                <div class="card-header">Make Appointment</div>
+                <div class="card-body">
+                    <div>
+                    </div>
+                    <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
     </div>
-
-
-
 </body>
 
 </html>
