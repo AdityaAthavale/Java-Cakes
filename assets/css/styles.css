@@ -116,6 +116,9 @@ body {
 .checked {
     color: orange;
 }
+.formsContainer {
+    margin: 10px;
+}
 
 html {
     font-family: sans-serif;
