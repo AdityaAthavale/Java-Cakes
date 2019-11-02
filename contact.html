@@ -8,29 +8,27 @@
     <title>Contact</title>
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href=".\assets\css\contact.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script type="text/javascript" src="./assets/javascript/contact.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * {
-            box-sizing: border-box;
-            color: white;
-        }
 
-        .checked {
-            color: orange;
-        }
-    </style>
+     <!-- Moment.js Reference -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+     <!-- Date Picker -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" />
+     <script type="text/javascript" src="./assets/javascript/contact.js"></script>
+ 
 </head>
-
 <body>
     <h1 class=" text-center text-white d-none d-lg-block site-heading"><span
             class="text-primary site-heading-upper mb-3"></span><span class="site-heading-lower"
@@ -52,56 +50,64 @@
             </div>
         </div>
     </nav>
-    <div class='row'>
-        <div class="col-md-1"></div>
-        <div class="col-md-4">
-            <div id="feedbackCard" class="card text-white bg-dark mb-3">
-                <div class="card-header">Rating
-                    <div>
-                        <span class="fa fa-star" id="star1" onclick="add(this,1)"></span>
-                        <span class="fa fa-star" id="star2" onclick="add(this,2)"></span>
-                        <span class="fa fa-star" id="star3" onclick="add(this,3)"></span>
-                        <span class="fa fa-star" id="star4" onclick="add(this,4)"></span>
-                        <span class="fa fa-star" id="star5" onclick="add(this,5)"></span>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <form method="POST" action="#">
-                        <div class="form-group">
-                            <label for="firstName">Name</label>
-                            <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
-                        </div>
-                        <div class="form-group">
-                            <label for="phoneNumber">Phone Number</label>
-                            <input type="tel" class="form-control" id="phoneNumber" aria-describedby="phoneNumber"
-                                placeholder="(xxx) xxx-xxxx">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="email">
-                        </div>
-                        <div class="form-group">
-                            <label for="messages">We appreciate any Feedback</label>
-                            <textarea class="form-control" id="description" rows="4"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
+    <div class="col-md-1"></div>
+    <div class="col-md-4">
+        <div id="feedbackCard" class="card text-white bg-dark mb-3">
+            <div class="card-header">Rating
+                <div>
+                    <span class="fa fa-star" id="star1" onclick="add(this,1)"></span>
+                    <span class="fa fa-star" id="star2" onclick="add(this,2)"></span>
+                    <span class="fa fa-star" id="star3" onclick="add(this,3)"></span>
+                    <span class="fa fa-star" id="star4" onclick="add(this,4)"></span>
+                    <span class="fa fa-star" id="star5" onclick="add(this,5)"></span>
                 </div>
             </div>
-        </div>
-        <div class="col-md-2"></div>
-        <div class="col-md-4">
-            <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-                <div class="card-header">Make Appointment</div>
-                <div class="card-body">
-                    <div>
+            <div class="card-body">
+                <form method="POST" action="#">
+                    <div class="form-group">
+                        <label for="firstName">Name</label>
+                        <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
                     </div>
-                    <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
-                </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNumber" aria-describedby="phoneNumber"
+                            placeholder="(xxx) xxx-xxxx">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="messages">We appreciate any Feedback</label>
+                        <textarea class="form-control" id="description" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <div class="col-md-1"></div>
     </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Make Appointment</div>
+            <div class="card-body">
+                <form method="POST" action="#">
+                    <div class="form-group">
+                        <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                            <input type="text" class="input-group-text datetimepicker-input" data-target="#datetimepicker1"/>
+                            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="submitForm" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
 </body>
 
 </html>

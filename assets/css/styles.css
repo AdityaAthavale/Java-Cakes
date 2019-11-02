@@ -113,6 +113,10 @@ body {
     background-color: #fff;
 }
 
+.checked {
+    color: orange;
+}
+
 html {
     font-family: sans-serif;
     line-height: 1.15;

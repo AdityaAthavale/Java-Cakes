@@ -27,5 +27,9 @@ function add(ths, sno) {
         $('#feedbackCard').removeClass('bg-danger')
         $('#feedbackCard').addClass('bg-success')
     }
-
 }
+
+$('#datetimepicker1').datetimepicker({
+    viewMode: 'hours',
+    inline: true,
+});
