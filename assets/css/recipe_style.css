@@ -1,0 +1,48 @@
+/****   Menu page *******/
+
+#message {
+    font-size: 1em !important;
+    color: darkgrey;
+}
+
+/***********/
+
+
+/****   Recipe page    *******/
+.wrapper {
+    width: 100%;
+    max-width: 980px;
+    margin: 50px auto;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+img {
+    width: 100%;
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.card {
+    margin-bottom: 10px;
+}
+
+.link {
+    margin-bottom: 1em;
+    float: left;
+    background: #ffc107;
+    padding: 9px 50px;
+
+    color: black;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: black;
+}
+
+h2 {
+    font-size: 3em;
+}
