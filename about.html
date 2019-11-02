@@ -1,39 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-       /* Set the size of the div element that contains the map */
-      #map {
-        height: 400px;  /* The height is 400 pixels */
-        width: 100%;  /* The width is the width of the web page */
-       }
-    </style>
-    <!-- Include Bootstrap CSS -->
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<head>
+  <style>
+    /* Set the size of the div element that contains the map */
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
 
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src='./assets/javascript/googleMapsAPI.js'></script>
-  </head>
-  <body>
-    <div class='container'>
-        <div class="row">
-            <div class='col-md-6'>
-                <h1> About Page </h1>
-            </div>
-            <div class='col-md-6'>
-                <h3>Our Location:</h3>
-                <!--The div element for the map -->
-                <div id="map"></div>
-                <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKPn7kM_YFf90twAs2zZshXoF_j_xf48c&callback=initMap">
-                </script>
-            </div>
+  </style>
+  <!-- Include Bootstrap CSS -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src='./assets/javascript/googleMapsAPI.js'></script>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+    integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous">
+  </script>
+  <script src="js/tether.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<!--Header-->
+
+<body>
+  <h1 class="text-center text-white d-none d-lg-block site-heading"><span
+      class="text-primary site-heading-upper mb-3"></span><span class="site-heading-lower"
+      style="color: #07f164;font-size: 119px; font-weight: bold;">Java cakes</span></h1>
+  <nav class="navbar navbar-light navbar-expand-lg bg-dark py-lg-4" id="mainNav">
+    <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">THE
+        CAKES</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="nav navbar-nav mx-auto">
+          <li class="nav-item" role="presentation"><a class="nav-link active" href="menu.html">Menu</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">About us</a></li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a> </li>
+          <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--About Page-->
+
+  <div class='container'>
+    <div class="row">
+      <div class='col-md-6'>
+        <div class="card text-white bg-dark mb-3" style="max-width: 50rem;">
+          <div class="card-header">JavaCake</div>
+          <div class="card-body">
+            <h5 class="card-title">About</h5>
+            <p class="card-text">We offer buttery breakfast pastries, grand homemade cookies, luscious pies, gorgeous
+              cakes, and sandwiches, soups, salads, and grain bowls. We want each customer’s experience to be full of
+              delight, and we focus on all aspects involved: great food, gracious service, warm atmosphere, heady
+              aromas, and irresistible displays.</p>
+
+            <p class="card-text">Crusty, crackling baguettes warm from the steaming oven… buttery, raisin-filled brioche
+              shaped in a swirl and drizzled with sweet icing… silky-smooth chocolate cream pie… lemon curd cakes filled
+              with raspberry preserves… fresh, made-to-order salads and sandwiches. Imagine enjoying a muffin still warm
+              from the oven, made with real butter and fresh seasonal fruit, alongside a cafe latte in an oversized mug.
+              For lunch, choose among daily specials such as bacon and caramelized onion quiche or a slice of tomato,
+              guanciale, breadcrumb, calabrian chili pizza. Bring home a beautifully decorated birthday cake made with
+              flourless chocolate cake layers and rich chocolate mousse. We offer buttery breakfast pastries, grand
+              homemade cookies, luscious pies, gorgeous cakes, and sandwiches, soups, salads, and grain bowls. Our
+              business includes morning commuters stopping in for breakfast, area employees and neighbors enjoying
+              lunch, friends meeting for coffee and talk, office workers seeking to satisfy their 4pm sugar craving,
+              people picking up bread, salad, or dessert for their evening meal. Along with our quality product, our
+              success depends on a well-trained, professional service staff. We strive to be constantly and consistently
+              friendly, attentive, and courteous. We want each customer’s experience to be full of delight, and we focus
+              on all aspects involved: great food, gracious service, warm atmosphere, heady aromas, and irresistible
+              displays. We can’t wait to see you!</p>
+            <a class="btn btn-primary btn-lg" href="menu.html" role="button">Menu</a>
+          </div>
         </div>
-    </div>   
-  </body>
+      </div>
+      <div class='col-md-6'>
+        <div class="card text-white bg-dark mb-3" style="max-width: 50rem;">
+          <div class="card-header">Meet us at:</div>
+          <div class="card-body">
+
+            <!--The div element for the map -->
+
+            <div id="map"></div>
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKPn7kM_YFf90twAs2zZshXoF_j_xf48c&callback=initMap">
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Image Containers-->
+
+  <div class="container-fluid text-center bg-grey">
+    <div class="row text-center">
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./background2.jpg" alt="JavaCake">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./background3.jpg" alt="JavaCake">
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="thumbnail">
+          <img src="./background1.jpg" alt="JavaCake">
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer class="footer text-faded text-center py-5">
+      <div class="container">
+        <p class="m-0 small">Copyright©APRSBBrand 2019</p>
+      </div>
+    </footer>
+</body>
+
 </html>
