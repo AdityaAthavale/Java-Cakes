@@ -1,3 +1,4 @@
+
 function add(ths, sno) {
     for (var i = 1; i <= 5; i++) {
         var cur = document.getElementById("star" + i)
@@ -29,7 +30,8 @@ function add(ths, sno) {
     }
 }
 
-$('#datetimepicker1').datetimepicker({
-    viewMode: 'hours',
-    inline: true,
-});
+// $(document).ready(function() {$('#datetimepicker1').datetimepicker({
+//     viewMode: 'hours',
+//     inline: true,
+// });
+// })
