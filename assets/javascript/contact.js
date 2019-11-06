@@ -1,3 +1,4 @@
+
 function add(ths, sno) {
     for (var i = 1; i <= 5; i++) {
         var cur = document.getElementById("star" + i)
@@ -27,5 +28,10 @@ function add(ths, sno) {
         $('#feedbackCard').removeClass('bg-danger')
         $('#feedbackCard').addClass('bg-success')
     }
-
 }
+
+// $(document).ready(function() {$('#datetimepicker1').datetimepicker({
+//     viewMode: 'hours',
+//     inline: true,
+// });
+// })
