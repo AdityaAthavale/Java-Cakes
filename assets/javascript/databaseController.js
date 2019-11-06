@@ -18,34 +18,7 @@ var firebaseConfig = {
 
     let appointments = new Array()
     // button for addind info
-    $("#submitForm").on("click", function (event) {
-    event.preventDefault();
-
-    // Grab user input
-    let userName = $("#firstName").val().trim();
-    let userPhoneNumber = $("#phoneNumber").val().trim();
-    let userEmail = $("#email").val().trim();
-    let userFeedback = $("#description").val().trim();
-
-    // creating local "temp" object to hold users data
-    const usersFeedback = {
-        name: userName,
-        phoneNumber: userPhoneNumber,
-        email: userEmail,
-        feedback: userFeedback,
-
-    };
-
-    // Uploads user infoto the database
-    database.ref('/Feedback').push(usersFeedback);
-
-    // Clears all of the text-boxes
-    $("#firstName").val("");
-    $("#phoneNumber").val("");
-    $("#email").val("");
-    $("#description").val("");
-
-});
+    
 
 //  Create Firebase event for adding users info to the database  when a user adds an entry
 database.ref('/Feedback').on("child_added", function (childSnapshot) {
@@ -70,14 +43,43 @@ $(document).ready(function() {
         for(let i=0; i<appointments.length; i++) {
             let apt = moment(appointments[i])
             let newApt = moment(usersDate.appoinment)
-            if (apt.diff(newApt, 'minutes') < 15) {
+            if (apt.diff(newApt, 'minutes') < 15 && apt.diff(newApt, 'minutes') > -15) {
                 $('#error-model').modal('show')
                 return;
             }
         }
-        database.ref('/Appointment').push(usersDate.appoinment);
+        database.ref('/Appointment').push(usersDate);
         // Clears all of the text-boxes
         $("#appointment").val("");
+    
+    });
+
+    $("#submitForm").on("click", function (event) {
+        event.preventDefault();
+    
+        // Grab user input
+        let userName = $("#firstName").val().trim();
+        let userPhoneNumber = $("#phoneNumber").val().trim();
+        let userEmail = $("#email").val().trim();
+        let userFeedback = $("#description").val().trim();
+    
+        // creating local "temp" object to hold users data
+        const usersFeedback = {
+            name: userName,
+            phoneNumber: userPhoneNumber,
+            email: userEmail,
+            feedback: userFeedback,
+    
+        };
+    
+        // Uploads user infoto the database
+        database.ref('/Feedback').push(usersFeedback);
+    
+        // Clears all of the text-boxes
+        $("#firstName").val("");
+        $("#phoneNumber").val("");
+        $("#email").val("");
+        $("#description").val("");
     
     });
 })
