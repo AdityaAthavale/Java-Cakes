@@ -16,7 +16,7 @@
     --gray: #868e96;
     --gray-dark: #343a40;
     --primary: #e6a756;
-    --secondary: #2f170f;
+    --secondary: #000000;
     --success: #28a745;
     --info: #17a2b8;
     --warning: #ffc107;
@@ -2714,8 +2714,8 @@ fieldset:disabled a.btn {
 
 .btn-secondary {
     color: #fff;
-    background-color: #2f170f;
-    border-color: #2f170f
+    background-color: #000000;
+    border-color: #000000
 }
 
 .btn-secondary:hover {
@@ -2732,8 +2732,8 @@ fieldset:disabled a.btn {
 .btn-secondary.disabled,
 .btn-secondary:disabled {
     color: #fff;
-    background-color: #2f170f;
-    border-color: #2f170f
+    background-color: #000000;
+    border-color: #000000
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
@@ -3015,14 +3015,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-    color: #2f170f;
-    border-color: #2f170f
+    color: #000000;
+    border-color: #000000
 }
 
 .btn-outline-secondary:hover {
     color: #fff;
-    background-color: #2f170f;
-    border-color: #2f170f
+    background-color: #000000;
+    border-color: #000000
 }
 
 .btn-outline-secondary.focus,
@@ -3032,7 +3032,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-secondary.disabled,
 .btn-outline-secondary:disabled {
-    color: #2f170f;
+    color: #000000;
     background-color: transparent
 }
 
@@ -3040,8 +3040,8 @@ fieldset:disabled a.btn {
 .btn-outline-secondary:not(:disabled):not(.disabled):active,
 .show>.btn-outline-secondary.dropdown-toggle {
     color: #fff;
-    background-color: #2f170f;
-    border-color: #2f170f
+    background-color: #000000;
+    border-color: #000000
 }
 
 .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
@@ -5336,7 +5336,7 @@ a.badge-primary:focus {
 
 .badge-secondary {
     color: #fff;
-    background-color: #2f170f
+    background-color: #000000
 }
 
 a.badge-secondary:focus,
@@ -6955,7 +6955,7 @@ button.bg-primary:hover {
 }
 
 .bg-secondary {
-    background-color: #2f170f !important
+    background-color: #000000 !important
 }
 
 a.bg-secondary:focus,
@@ -7084,7 +7084,7 @@ button.bg-dark:hover {
 }
 
 .border-secondary {
-    border-color: #2f170f !important
+    border-color: #000000 !important
 }
 
 .border-success {
@@ -10846,7 +10846,7 @@ a.text-primary:hover {
 }
 
 .text-secondary {
-    color: #2f170f !important
+    color: #000000 !important
 }
 
 a.text-secondary:focus,
