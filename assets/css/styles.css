@@ -113,6 +113,9 @@ body {
     clear: both;
 
 }
+.formsContainer {
+    margin: 10px;
+}
 
 
 html {

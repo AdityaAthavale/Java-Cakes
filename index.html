@@ -1,67 +1,100 @@
 <!DOCTYPE html>
-<html style="background-color: black;">
+<html>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>JAVA CAKES</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>THE CAKES</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body id="bg">
-    <nav class="navbar navbar-light navbar-expand-md navbar navbar-expand-lg fixed-top" id="mainNav">
-        <div class="container" style="font-size: 15px"><a class="navbar-brand js-scroll-trigger"
-                style="font-size: 75px; text-shadow: rgb(165, 67, 67) 0px 0px 5px, rgba(219, 37, 76, 0.363) 8px 0px 5px, #FFF 0px 0px 5px;"
-                data-bs-hover-animate="pulse grow">Java
-                Cakes</a><button data-toggle="collapse" class="navbar-toggler navbar-toggler-right"
-                data-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false"
-                aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
-            <div class="collapse navbar-collapse" style="padding-bottom: 68px;" id="navbarResponsive">
-                <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation">
-                        <a class="nav-link js-scroll-trigger" href="about.html">About</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a
-                            class="nav-link js-scroll-trigger" href="contact.html">CONTACT</a></li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a
-                            class="nav-link js-scroll-trigger" href="" data-bs-hover-animate="pulse">Recipes</a>
-                    </li>
-                    <li class="nav-item nav-link js-scroll-trigger" role="presentation"><a
-                            class="nav-link js-scroll-trigger" href="menu.html">MENU</a></li>
+<body>
+    <h1 class="text-center text-white d-none d-lg-block site-heading"><span
+            class="text-primary site-heading-upper mb-3"></span><span class="site-heading-lower"
+            style="color: #07f164;font-size: 119px; font-weight: bold;">Java cakes</span></h1>
+    <nav class="navbar navbar-light navbar-expand-lg bg-dark py-lg-4" id="mainNav">
+        <div class="container"><a class="navbar-brand text-uppercase d-lg-none text-expanded" href="#">THE
+                CAKES</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav mx-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="menu.html">Menu</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="contact.html">Contact</a> </li>
+                    <!-- <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li> -->
+
                 </ul>
             </div>
         </div>
-        </bg>
-
     </nav>
+    <!-- <section class="page-section clearfix"> -->
+    <!-- <div class="container"> -->
+    <div class="img-container" data-slideshow>
+        <img src="assets/images/cupcake.jpg">
+        <img src="assets/images/Delicious-Cakes.jpg">
+        <img src="assets/images/unicorn.jpg">
+        <img src="assets/images/fancy.jpg">
+        <img src="assets/images/cupcake.jpg">
+    </div>
 
-    <header class="masthead">
-        <div class="intro-body">
-        </div>
-    </header>
-    <div class="map-clean"></div>
-    <footer style="background-color: rgb(0, 0, 0);">
-        <div class="container text-center">
-            <p>Copyright ©&nbsp;Brand 2018</p>
-            <div>
-                <p id="message" style="color: rgb(255, 255, 255);background-color: rgba(0, 0, 0, 0);">Beyond the menu,
-                    want something
-                    fancier? Browser hundreds of
-                    our all-time
-                    favorite<span><a href="recipe.html"> Recipes </a></span>to see what make your taste buds
-                    happy. <br>
-                    We'll customize it for you!</p>
+    <!-- <div class="intro"><img class="img-fluid intro-img mb-3 mb-lg-0 rounded" src="assets/images/cupcake.jpg"
+                    width="88px" height="250px">
+
+                <div class="intro-text left-0 text-centerfaded p-5 rounded bg-faded text-center"
+                    style="background-color: #ffffff;">
+                    <h2 class="section-heading mb-4"><span class="section-heading-upper">THE SWEETS</span><span
+                            class="section-heading-lower">The best bakery in town</span></h2>
+                    <p class="mb-3">We take pride in every cupcake, cake, and pastry we bake. Just one bite and your
+                        hooked for life!</p> -->
+
+    <!-- </div>
+    </div>
+    </section> -->
+    <section class="page-section cta" style="background-color: #e65f56;">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-4"><span class="section-heading-upper"
+                                style="color: #07f164;font-weight: bold">Our Promise</span><span
+                                class="section-heading-lower" style="color: #07f164;font-weight: bold">To You</span>
+                        </h2>
+                        <p class="mb-0">The moment you walk into our shop, we are dedicated to providing you
+                            with friendly service, a welcoming atmosphere, and above all else, excellent products
+                            made
+                            with the highest quality ingredients. If you are not satisfied,
+                            please let us know and we will do whatever we can to make things right!</p>
+                        <div class="mx-auto intro-button"><a class="btn btn-primary d-inline-block mx-auto btn-xl"
+                                role="button" href="about.html">Come visit us today!</a></div>
+                    </div>
+                </div>
             </div>
+        </div>
+        </div>
+    </section>
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <p class="m-0 small">Copyright©APRSBBrand 2019</p>
         </div>
     </footer>
     <script src="assets/javascript/jquery.min.js"></script>
     <script src="assets/css/bootstrap.min.css"></script>
-    <script src="assets/javascript/bs-animation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="assets/javascript/image fade.js"></script>
 </body>
 
 </html>
