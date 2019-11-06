@@ -717,8 +717,8 @@ pre code {
 .col-xl-auto {
     position: relative;
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px
+    padding-right: 1px;
+    padding-left: 1px
 }
 
 .col {
@@ -8670,7 +8670,7 @@ button.bg-dark:hover {
 
 .mb-4,
 .my-4 {
-    margin-bottom: 1.5rem !important
+    margin-bottom: 1.0rem !important
 }
 
 .ml-4,
