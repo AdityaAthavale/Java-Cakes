@@ -5,7 +5,7 @@ $(document).ready(function () {
     // ***********************
     function displayCakes(evt) {
         var queryURL1 =
-            "https://api.edamam.com/search?q=cupcakes&to=100&app_id=361b960d&app_key=d5194eec5a7983605d72b23429e0724d";
+            "https://api.edamam.com/search?q=cake&to=100&app_id=361b960d&app_key=d5194eec5a7983605d72b23429e0724d";
 
         $.ajax({
             url: queryURL1,
