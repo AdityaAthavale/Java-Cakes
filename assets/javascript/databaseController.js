@@ -11,50 +11,23 @@ var firebaseConfig = {
     measurementId: "G-01CFYFZEY6"
 };
 
+let appointments = new Array()
+
+$(document).ready(function() {
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
-
     const database = firebase.database();
 
-    let appointments = new Array()
-    // button for addind info
-    $("#submitForm").on("click", function (event) {
-    event.preventDefault();
+    //Get list of set appointments
+    database.ref('/Appointment').on('value', function(snapshot) {
+        appointments = new Array()
+        snapshot.forEach(element => {
+            appointments.push(element.val().appoinment)
+        })
+    })
 
-    // Grab user input
-    let userName = $("#firstName").val().trim();
-    let userPhoneNumber = $("#phoneNumber").val().trim();
-    let userEmail = $("#email").val().trim();
-    let userFeedback = $("#description").val().trim();
 
-    // creating local "temp" object to hold users data
-    const usersFeedback = {
-        name: userName,
-        phoneNumber: userPhoneNumber,
-        email: userEmail,
-        feedback: userFeedback,
-
-    };
-
-    // Uploads user infoto the database
-    database.ref('/Feedback').push(usersFeedback);
-
-    // Clears all of the text-boxes
-    $("#firstName").val("");
-    $("#phoneNumber").val("");
-    $("#email").val("");
-    $("#description").val("");
-
-});
-
-//  Create Firebase event for adding users info to the database  when a user adds an entry
-database.ref('/Feedback').on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
-
-});
-
-// button for appoinment
-$(document).ready(function() {
+    //Add Button listeners
     $("#submitForm-date").on("click", function (event) {
         debugger;
         event.preventDefault();
@@ -80,21 +53,48 @@ $(document).ready(function() {
         $("#appointment").val("");
     
     });
+
+    $("#submitForm").on("click", function (event) {
+        event.preventDefault();
+    
+        // Grab user input
+        let userName = $("#firstName").val().trim();
+        let userPhoneNumber = $("#phoneNumber").val().trim();
+        let userEmail = $("#email").val().trim();
+        let userFeedback = $("#description").val().trim();
+    
+        // creating local "temp" object to hold users data
+        const usersFeedback = {
+            name: userName,
+            phoneNumber: userPhoneNumber,
+            email: userEmail,
+            feedback: userFeedback,
+    
+        };
+    
+        // Uploads user infoto the database
+        database.ref('/Feedback').push(usersFeedback);
+    
+        // Clears all of the text-boxes
+        $("#firstName").val("");
+        $("#phoneNumber").val("");
+        $("#email").val("");
+        $("#description").val("");
+    
+    });
+
+    //  Create Firebase event for adding users info to the database  when a user adds an entry
+    database.ref('/Appointment').on("child_added", function (childSnapshot) {
+        console.log(childSnapshot.val());
+    });
+
+    //  Create Firebase event for adding users info to the database  when a user adds an entry
+    database.ref('/Feedback').on("child_added", function (childSnapshot) {
+        console.log(childSnapshot.val());
+
+    });
+
 })
-
-
-//Get list of set appointments
-database.ref('/Appointment').on('value', function(snapshot) {
-    appointments = new Array()
-    snapshot.forEach(element => {
-        appointments.push(element.val().appoinment)
-    })
-})
-
-//  Create Firebase event for adding users info to the database  when a user adds an entry
-database.ref('/Appointment').on("child_added", function (childSnapshot) {
-    console.log(childSnapshot.val());
-});
 
 
 
